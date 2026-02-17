@@ -1,0 +1,7 @@
+{
+  "name": "GPD System - Gestión Pública Digital",
+  "description": "Comprehensive Document Management System (DMS) for public administration, featuring dashboard analytics, hierarchical office structures, user management, and advanced document tracking workflows.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
