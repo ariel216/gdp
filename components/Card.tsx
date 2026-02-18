@@ -78,8 +78,8 @@ export function StatCard({
         )}
       </div>
       <div className="mt-4">
-        <h3 className="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white tabular-nums leading-none">{value}</h3>
-        <p className="text-xs md:text-sm font-medium text-slate-500 dark:text-slate-400 mt-1.5">{label}</p>
+        <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white tabular-nums leading-none">{value}</h3>
+        <p className="text-xs font-medium text-slate-500 dark:text-slate-400 mt-1.5">{label}</p>
       </div>
     </div>
   );

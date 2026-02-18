@@ -159,7 +159,7 @@ const Tracking: React.FC = () => {
                     <span className="px-3 py-1 bg-primary/10 text-primary text-[10px] font-black rounded-lg uppercase tracking-widest border border-primary/10">NURI: {foundData.nuri}</span>
                     <span className="px-3 py-1 bg-green-50 dark:bg-green-900/20 text-green-600 text-[10px] font-black rounded-lg uppercase tracking-widest shadow-sm">ESTADO: {foundData.status}</span>
                   </div>
-                  <h2 className="text-2xl md:text-4xl font-black text-slate-900 dark:text-white uppercase tracking-tight leading-tight mb-4">{foundData.title}</h2>
+                  <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white uppercase tracking-tight leading-tight mb-4">{foundData.title}</h2>
                   <div className="flex flex-col sm:flex-row gap-4 sm:items-center text-slate-500 dark:text-slate-400 text-sm italic font-medium">
                     <span className="flex items-center gap-2"><span className="material-symbols-outlined !text-base">tag</span> {foundData.hr}</span>
                     <span className="hidden sm:inline">•</span>
@@ -175,8 +175,8 @@ const Tracking: React.FC = () => {
                     <div>
                       <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-2">Días en Trámite</p>
                       <div className="flex items-center gap-2">
-                        <span className="font-black text-primary text-3xl tabular-nums">{foundData.processDays}</span>
-                        <span className="text-[10px] font-black text-slate-400 uppercase leading-none">Días<br/>Hábiles</span>
+                        <span className="font-bold text-primary text-2xl tabular-nums">{foundData.processDays}</span>
+                        <span className="text-[9px] font-bold text-slate-400 uppercase leading-none">Días<br/>Hábiles</span>
                       </div>
                     </div>
                     <div>

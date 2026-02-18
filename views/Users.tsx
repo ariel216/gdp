@@ -121,8 +121,8 @@ const Users: React.FC = () => {
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div className="space-y-1">
-            <h1 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight uppercase leading-none">Gestión de Usuarios</h1>
-            <p className="text-slate-500 dark:text-slate-400 text-sm md:text-base font-medium">Control centralizado de identidades, roles jerárquicos y auditoría de accesos.</p>
+            <h1 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white tracking-tight uppercase leading-none">Gestión de Usuarios</h1>
+            <p className="text-slate-500 dark:text-slate-400 text-xs md:text-sm font-medium">Control centralizado de identidades, roles jerárquicos y auditoría de accesos.</p>
           </div>
           <div className="flex flex-wrap gap-3">
             <button className="flex-1 lg:flex-none flex items-center justify-center gap-2 px-6 py-3.5 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl text-xs font-black uppercase tracking-widest text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all active:scale-95">
@@ -154,8 +154,8 @@ const Users: React.FC = () => {
                 </div>
                 <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest">GPD-V4</span>
               </div>
-              <h3 className="text-3xl font-black text-slate-900 dark:text-white tabular-nums">{s.val}</h3>
-              <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mt-1">{s.label}</p>
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white tabular-nums">{s.val}</h3>
+                <p className="text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mt-1">{s.label}</p>
             </div>
           ))}
         </div>
@@ -316,8 +316,8 @@ const Users: React.FC = () => {
         <div className="fixed bottom-10 left-1/2 -translate-x-1/2 z-50 animate-in slide-in-from-bottom-10 duration-500">
            <div className="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-10 py-6 rounded-[3rem] shadow-[0_40px_100px_rgba(0,0,0,0.4)] flex items-center gap-10 border border-white/10 dark:border-slate-200 backdrop-blur-2xl">
               <div className="flex flex-col">
-                <span className="text-[10px] font-black uppercase tracking-[0.3em] opacity-50">Seleccionados</span>
-                <span className="text-3xl font-black tabular-nums">{selectedIds.size}</span>
+              <span className="text-[9px] font-bold uppercase tracking-[0.3em] opacity-50">Seleccionados</span>
+              <span className="text-2xl font-bold tabular-nums">{selectedIds.size}</span>
               </div>
               <div className="h-14 w-px bg-white/10 dark:bg-slate-200"></div>
               <div className="flex items-center gap-4">
@@ -358,9 +358,9 @@ const Users: React.FC = () => {
                    </div>
                 </div>
                 <div>
-                  <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tighter leading-none">
-                    {modalMode === 'create' ? 'Crear Nuevo Perfil' : 'Editar Configuración de Usuario'}
-                  </h2>
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white uppercase tracking-tighter leading-none">
+                  {modalMode === 'create' ? 'Nuevo Usuario' : `Editar: ${editingUser.name}`}
+                </h2>
                   <p className="text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em] mt-3 flex items-center gap-2">
                     <span className="size-2 bg-primary rounded-full"></span>
                     Módulo Administrativo GPD v4.0 • SISTEMA DE IDENTIDADES

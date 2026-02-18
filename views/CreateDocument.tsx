@@ -120,7 +120,7 @@ const CreateDocument: React.FC = () => {
           
           <div className="mb-10 text-center lg:text-left flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div>
-              <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tighter uppercase mb-2">Creación de Documento</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white tracking-tighter uppercase mb-2">Creación de Documento</h2>
               <p className="text-slate-500 dark:text-slate-400 font-bold uppercase tracking-widest text-xs flex items-center justify-center lg:justify-start gap-2">
                 <span className="size-2 bg-primary rounded-full animate-pulse"></span>
                 Editor institucional GPD v4.0

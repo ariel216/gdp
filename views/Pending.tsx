@@ -168,7 +168,7 @@ const Pending: React.FC = () => {
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-1">
-            <h1 className="text-slate-900 dark:text-white text-3xl md:text-4xl font-black tracking-tight uppercase">Documentos Pendientes</h1>
+            <h1 className="text-slate-900 dark:text-white text-2xl md:text-3xl font-bold tracking-tight uppercase">Documentos Pendientes</h1>
             <p className="text-slate-500 dark:text-slate-400 text-sm md:text-base font-medium">Gestione los trámites activos que requieren su atención u oficina.</p>
           </div>
           <div className="flex gap-2">
@@ -380,7 +380,7 @@ const Pending: React.FC = () => {
            <div className="bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-10 py-6 rounded-[3rem] shadow-[0_40px_100px_rgba(0,0,0,0.4)] flex items-center gap-10 border border-white/10 dark:border-slate-200 backdrop-blur-2xl">
               <div className="flex flex-col">
                 <span className="text-[10px] font-black uppercase tracking-[0.3em] opacity-50">Documentos Seleccionados</span>
-                <span className="text-3xl font-black tabular-nums">{selectedIds.size}</span>
+                <span className="text-2xl font-bold tabular-nums">{selectedIds.size}</span>
               </div>
               <div className="h-14 w-px bg-white/10 dark:bg-slate-200"></div>
               <div className="flex items-center gap-4">
@@ -528,7 +528,7 @@ const Pending: React.FC = () => {
                    <div className="size-32 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-emerald-500/10">
                       <span className="material-symbols-outlined !text-7xl font-black">task_alt</span>
                    </div>
-                   <h3 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight leading-none">Confirmación de Salida</h3>
+                   <h3 className="text-2xl font-bold text-slate-900 dark:text-white uppercase tracking-tight leading-none">Confirmación de Salida</h3>
                    <p className="text-slate-500 dark:text-slate-400 font-medium max-w-lg mx-auto leading-relaxed">
                      Se ha verificado la integridad de los datos. Al confirmar, el documento abandonará su bandeja de pendientes y se generará el movimiento oficial al destinatario seleccionado.
                    </p>

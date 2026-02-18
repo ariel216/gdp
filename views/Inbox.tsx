@@ -139,7 +139,7 @@ const Inbox: React.FC = () => {
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-2">
           <div className="space-y-1">
-            <h1 className="text-slate-900 dark:text-white text-2xl md:text-4xl font-black tracking-tight uppercase">Bandeja de Entrada</h1>
+            <h1 className="text-slate-900 dark:text-white text-2xl md:text-3xl font-bold tracking-tight uppercase">Bandeja de Entrada</h1>
             <p className="text-slate-500 dark:text-slate-400 text-sm md:text-base font-medium">Gestión y recepción oficial de correspondencia y trámites internos.</p>
           </div>
           <div className="flex flex-wrap gap-3">
@@ -437,7 +437,7 @@ const Inbox: React.FC = () => {
                    <div className="size-28 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-emerald-500/10">
                       <span className="material-symbols-outlined !text-6xl font-black">task_alt</span>
                    </div>
-                   <h3 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">Todo listo para derivar</h3>
+                   <h3 className="text-2xl font-bold text-slate-900 dark:text-white uppercase tracking-tight">Todo listo para derivar</h3>
                    <p className="text-slate-500 dark:text-slate-400 font-medium max-w-lg mx-auto">
                      Se ha validado la información. Al confirmar, el documento será marcado como recibido en su bandeja y se generará el movimiento oficial al siguiente destinatario.
                    </p>

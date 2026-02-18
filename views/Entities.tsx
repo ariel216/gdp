@@ -51,8 +51,8 @@ const Entities: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div className="space-y-1">
-            <h1 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight uppercase">Gestión de Entidades</h1>
-            <p className="text-slate-500 dark:text-slate-400 text-sm md:text-base font-medium">Instituciones registradas en el ecosistema GPD.</p>
+            <h1 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white tracking-tight uppercase">Gestión de Entidades</h1>
+            <p className="text-slate-500 dark:text-slate-400 text-xs md:text-sm font-medium">Instituciones registradas en el ecosistema GPD.</p>
           </div>
             <button 
             onClick={() => { setEditingEntity({}); setIsModalOpen(true); }}
@@ -75,8 +75,8 @@ const Entities: React.FC = () => {
                 <div className={`size-12 rounded-2xl bg-${s.color}-50 dark:bg-${s.color}-900/20 text-${s.color}-600 dark:text-${s.color}-400 flex items-center justify-center mb-4`}>
                   <span className="material-symbols-outlined !text-3xl font-bold">{s.icon}</span>
                 </div>
-                <h3 className="text-3xl font-black text-slate-900 dark:text-white">{s.val}</h3>
-                <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mt-1">{s.label}</p>
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">{s.val}</h3>
+                <p className="text-[9px] font-bold text-slate-400 uppercase tracking-widest mt-1">{s.label}</p>
              </div>
            ))}
         </div>

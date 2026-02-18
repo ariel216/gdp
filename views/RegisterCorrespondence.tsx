@@ -139,8 +139,8 @@ const RegisterCorrespondence: React.FC = () => {
                 </span>
                 SISTEMA EN LÍNEA • {new Date().toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' })}
               </div>
-              <h2 className="text-3xl md:text-4xl font-black tracking-tight text-slate-900 dark:text-white uppercase">Recepción de Documentos</h2>
-              <p className="text-slate-500 dark:text-slate-400 text-sm md:text-base font-medium">Digitalización y registro de correspondencia externa oficial.</p>
+              <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900 dark:text-white uppercase">Recepción de Documentos</h2>
+              <p className="text-slate-500 dark:text-slate-400 text-xs md:text-sm font-medium">Digitalización y registro de correspondencia externa oficial.</p>
             </div>
             
             <div className="relative">

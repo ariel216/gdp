@@ -102,7 +102,7 @@ const Outbox: React.FC = () => {
         {/* Page Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div className="space-y-1">
-            <h1 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight uppercase">Correspondencia Enviada</h1>
+            <h1 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white tracking-tight uppercase">Correspondencia Enviada</h1>
             <p className="text-slate-500 dark:text-slate-400 text-sm md:text-base font-medium">Control de salida y trazabilidad de documentos hacia entidades externas.</p>
           </div>
           <button 
@@ -303,7 +303,7 @@ const Outbox: React.FC = () => {
               </div>
               <div>
                 <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.25em] leading-none mb-2">{stat.label}</p>
-                <p className={`text-4xl font-black text-${stat.color}-600 dark:text-${stat.color}-400 tabular-nums leading-none`}>{stat.val}</p>
+                <p className={`text-2xl font-bold text-${stat.color}-600 dark:text-${stat.color}-400 tabular-nums leading-none`}>{stat.val}</p>
               </div>
             </div>
           ))}
