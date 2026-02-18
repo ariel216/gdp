@@ -143,7 +143,7 @@ const Inbox: React.FC = () => {
             <p className="text-slate-500 dark:text-slate-400 text-sm md:text-base font-medium">Gestión y recepción oficial de correspondencia y trámites internos.</p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <button className="flex-1 sm:flex-none flex items-center justify-center gap-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-6 py-3 rounded-2xl text-xs font-black uppercase tracking-widest text-slate-700 dark:text-slate-200 shadow-sm hover:bg-gray-50 dark:hover:bg-slate-700 transition-all active:scale-95">
+            <button className="flex-1 sm:flex-none flex items-center justify-center gap-3 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 px-6 py-3 rounded-2xl text-xs font-black uppercase tracking-widest text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all active:scale-95">
               <span className="material-symbols-outlined text-primary font-bold">menu_book</span>
               Recibir + Libro
             </button>

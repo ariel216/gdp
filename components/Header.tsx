@@ -58,7 +58,7 @@ const Header: React.FC<HeaderProps> = ({
   ];
 
   return (
-    <header className="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 md:px-8 flex items-center justify-between shrink-0 sticky top-0 z-40 transition-colors duration-300">
+    <header className="h-16 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800 px-4 md:px-8 flex items-center justify-between shrink-0 sticky top-0 z-40 transition-colors duration-300 shadow-sm">
       <div className="flex items-center gap-3">
         <button 
           onClick={onMenuToggle}
@@ -88,7 +88,7 @@ const Header: React.FC<HeaderProps> = ({
           <input
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-transparent rounded-xl text-sm focus:bg-white dark:focus:bg-slate-700 text-slate-900 dark:text-white focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all placeholder:text-slate-400"
+            className="w-full pl-10 pr-4 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-xl text-sm focus:bg-white dark:focus:bg-slate-700 text-slate-900 dark:text-white focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all placeholder:text-slate-400"
             placeholder="Buscar Hoja de Ruta (HR-...) o NURI..."
             type="text"
           />
@@ -99,9 +99,9 @@ const Header: React.FC<HeaderProps> = ({
         {onAction && actionLabel && (
           <button
             onClick={onAction}
-            className="flex items-center gap-2 px-3 md:px-4 py-2 bg-primary text-white rounded-xl text-sm font-bold shadow-lg shadow-primary/20 hover:bg-blue-600 transition-all active:scale-95"
+            className="flex items-center gap-2 px-4 md:px-5 py-2.5 bg-primary text-white rounded-2xl text-sm font-bold uppercase tracking-wide shadow-lg shadow-primary/20 hover:bg-blue-600 active:scale-95 transition-all"
           >
-            <span className="material-symbols-outlined text-xl">add</span>
+            <span className="material-symbols-outlined text-lg">add</span>
             <span className="hidden sm:inline">{actionLabel}</span>
           </button>
         )}
@@ -128,9 +128,9 @@ const Header: React.FC<HeaderProps> = ({
             </button>
 
             {isNotificationsOpen && (
-              <div className="absolute top-full right-0 mt-3 w-80 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] overflow-hidden animate-in zoom-in-95 duration-200">
-                <div className="p-5 border-b border-slate-50 dark:border-slate-800 flex justify-between items-center bg-slate-50/50 dark:bg-slate-800/30">
-                  <h4 className="text-[10px] font-black uppercase tracking-widest text-slate-400">Notificaciones</h4>
+              <div className="absolute top-full right-0 mt-3 w-80 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl shadow-lg dark:shadow-xl overflow-hidden animate-in zoom-in-95 duration-200">
+                <div className="p-5 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center bg-slate-50 dark:bg-slate-800/50">
+                  <h4 className="text-[10px] font-black uppercase tracking-widest text-slate-500 dark:text-slate-400">Notificaciones</h4>
                   <button className="text-[9px] font-black uppercase text-primary hover:underline">Marcar todas</button>
                 </div>
                 <div className="max-h-96 overflow-y-auto custom-scrollbar">
@@ -181,11 +181,11 @@ const Header: React.FC<HeaderProps> = ({
           </button>
 
           {isUserMenuOpen && (
-            <div className="absolute top-full right-0 mt-3 w-64 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.2)] overflow-hidden animate-in zoom-in-95 duration-200">
-               <div className="p-6 bg-slate-50 dark:bg-slate-800/30 border-b border-slate-100 dark:border-slate-800">
-                  <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Identidad de Acceso</p>
+            <div className="absolute top-full right-0 mt-3 w-64 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl shadow-lg dark:shadow-xl overflow-hidden animate-in zoom-in-95 duration-200">
+               <div className="p-6 bg-slate-50 dark:bg-slate-800/50 border-b border-slate-100 dark:border-slate-800">
+                  <p className="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-1">Identidad de Acceso</p>
                   <p className="text-sm font-black text-slate-900 dark:text-white uppercase truncate">Juan Pérez V.</p>
-                  <p className="text-[10px] text-slate-500 font-bold truncate">j.perez@gpd.gob.bo</p>
+                  <p className="text-[10px] text-slate-500 dark:text-slate-400 font-bold truncate">j.perez@gpd.gob.bo</p>
                </div>
                <div className="p-2">
                   <button className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl text-xs font-black text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-primary transition-all uppercase tracking-widest">

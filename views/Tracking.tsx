@@ -121,7 +121,7 @@ const Tracking: React.FC = () => {
               <input 
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-32 py-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl text-lg font-black dark:text-white shadow-sm focus:ring-4 focus:ring-primary/10 focus:border-primary outline-none transition-all placeholder:text-slate-300" 
+                className="w-full pl-12 pr-32 py-4 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-2xl text-lg font-black dark:text-white shadow-sm focus:ring-4 focus:ring-primary/10 focus:border-primary outline-none transition-all placeholder:text-slate-300" 
                 placeholder="Ingrese NURI o Hoja de Ruta..." 
                 type="text" 
               />
@@ -134,7 +134,7 @@ const Tracking: React.FC = () => {
             </form>
           </div>
           
-          <div className="flex items-center gap-4 bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm transition-colors w-full sm:w-auto">
+            <div className="flex items-center gap-4 bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm transition-colors w-full sm:w-auto">
             <div className="text-left sm:text-right">
               <p className="text-xs font-black text-slate-900 dark:text-white uppercase tracking-tight leading-none mb-1">Acceso Público</p>
               <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Vista para ciudadanos</p>
@@ -152,7 +152,7 @@ const Tracking: React.FC = () => {
             <div className="xl:col-span-8 space-y-6 md:space-y-10">
               
               {/* Metadata Card */}
-              <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden transition-colors">
+              <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm overflow-hidden transition-colors">
                 <div className="bg-primary h-2"></div>
                 <div className="p-6 md:p-10">
                   <div className="flex flex-wrap items-center gap-3 mb-6">
@@ -192,7 +192,7 @@ const Tracking: React.FC = () => {
               </div>
 
               {/* Flow Visualizer */}
-              <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-200 dark:border-slate-800 p-6 md:p-10 shadow-sm transition-colors overflow-hidden">
+              <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 p-6 md:p-10 shadow-sm transition-colors overflow-hidden">
                 <div className="flex items-center gap-3 mb-10">
                   <div className="size-10 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
                     <span className="material-symbols-outlined !text-2xl font-bold">route</span>
@@ -231,7 +231,7 @@ const Tracking: React.FC = () => {
                 <button className="flex-1 min-w-[160px] bg-slate-900 dark:bg-slate-800 text-white font-black text-xs uppercase tracking-widest py-4 rounded-2xl shadow-xl hover:bg-slate-800 transition-all flex items-center justify-center gap-3 active:scale-95">
                   <span className="material-symbols-outlined !text-xl">picture_as_pdf</span> Imprimir Informe de Ruta
                 </button>
-                <button className="flex-1 min-w-[160px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 font-black text-xs uppercase tracking-widest py-4 rounded-2xl shadow-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-all flex items-center justify-center gap-3 active:scale-95">
+                <button className="flex-1 min-w-[160px] bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 text-slate-700 dark:text-slate-200 font-black text-xs uppercase tracking-widest py-4 rounded-2xl shadow-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-all flex items-center justify-center gap-3 active:scale-95">
                   <span className="material-symbols-outlined !text-xl">qr_code</span> Descargar Etiqueta QR
                 </button>
               </div>

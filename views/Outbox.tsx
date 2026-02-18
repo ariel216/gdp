@@ -115,7 +115,7 @@ const Outbox: React.FC = () => {
         </div>
 
         {/* Dynamic Filter Bar */}
-        <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] shadow-sm border border-slate-200 dark:border-slate-800 p-6 transition-colors">
+        <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 p-6 transition-colors">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 items-end">
             <div className="lg:col-span-4 space-y-2">
               <label className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] px-1">Buscar Trámite</label>
@@ -171,11 +171,11 @@ const Outbox: React.FC = () => {
         </div>
 
         {/* Results Table */}
-        <div className="bg-white dark:bg-slate-900 rounded-[3rem] shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden transition-colors">
+        <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden transition-colors">
           <div className="overflow-x-auto custom-scrollbar">
             <table className="w-full text-left border-collapse min-w-[1100px]">
               <thead>
-                <tr className="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800">
+                <tr className="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-100 dark:border-slate-800">
                   <th className="px-8 py-6 text-[10px] font-black text-slate-400 uppercase tracking-widest">NUR / Folio</th>
                   <th className="px-8 py-6 text-[10px] font-black text-slate-400 uppercase tracking-widest">Fecha Salida</th>
                   <th className="px-8 py-6 text-[10px] font-black text-slate-400 uppercase tracking-widest">Destinatario</th>
@@ -297,7 +297,7 @@ const Outbox: React.FC = () => {
             { label: 'En Tránsito / Despachados', val: documents.filter(d => d.status === 'Despachado').length, icon: 'local_shipping', color: 'amber' },
             { label: 'Confirmados Externos', val: documents.filter(d => d.status === 'Recibido').length, icon: 'fact_check', color: 'emerald' },
           ].map((stat, i) => (
-            <div key={i} className="bg-white dark:bg-slate-900 p-8 rounded-[2.5rem] border border-slate-200 dark:border-slate-800 flex items-center gap-6 transition-all hover:shadow-xl hover:border-primary/20 group">
+            <div key={i} className="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-100 dark:border-slate-800 flex items-center gap-6 transition-all hover:shadow-md dark:hover:shadow-primary/5 hover:border-primary/20 group">
               <div className={`size-16 bg-${stat.color}-50 dark:bg-${stat.color}-900/20 rounded-[1.5rem] flex items-center justify-center text-${stat.color}-600 dark:text-${stat.color}-400 shadow-inner shrink-0 transition-transform group-hover:scale-110`}>
                 <span className="material-symbols-outlined !text-4xl">{stat.icon}</span>
               </div>

@@ -48,7 +48,7 @@ const Settings: React.FC = () => {
           <div className="flex-1 space-y-6 md:space-y-8 min-w-0">
             {activeTab === 'general' && (
               <section className="space-y-6 animate-in fade-in slide-in-from-right-2 duration-300">
-                <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden transition-colors">
+                <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden transition-colors">
                   <div className="p-5 md:p-6 border-b border-slate-50 dark:border-slate-800 bg-slate-50/30 dark:bg-slate-800/30">
                     <h2 className="text-lg md:text-xl font-black text-slate-900 dark:text-white uppercase tracking-tight">Identidad del Sistema</h2>
                     <p className="text-[10px] md:text-xs text-slate-400 dark:text-slate-500 font-bold uppercase tracking-widest mt-1">Configuración base y estética visual.</p>
@@ -79,7 +79,7 @@ const Settings: React.FC = () => {
             )}
 
             {['documentos', 'notificaciones', 'seguridad', 'catalogos'].includes(activeTab) && (
-              <div className="p-12 text-center bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm animate-in fade-in zoom-in-95 duration-300 transition-colors">
+              <div className="p-12 text-center bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm animate-in fade-in zoom-in-95 duration-300 transition-colors">
                 <span className="material-symbols-outlined text-4xl text-slate-300 dark:text-slate-700 mb-4">construction</span>
                 <p className="text-sm font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest">Configuración en desarrollo</p>
               </div>
@@ -89,7 +89,7 @@ const Settings: React.FC = () => {
       </main>
 
       {/* Floating Action Bar */}
-      <footer className="fixed bottom-0 left-0 lg:left-64 right-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 p-4 z-40 shadow-[0_-8px_24px_rgba(0,0,0,0.05)] transition-colors">
+      <footer className="fixed bottom-0 left-0 lg:left-64 right-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-100 dark:border-slate-800 p-4 z-40 shadow-[0_-8px_24px_rgba(0,0,0,0.05)] transition-colors">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
           <div className="hidden sm:flex items-center gap-2 text-slate-400 dark:text-slate-500">
             <span className="material-symbols-outlined text-lg">info</span>

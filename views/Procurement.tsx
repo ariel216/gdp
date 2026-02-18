@@ -33,7 +33,7 @@ const Procurement: React.FC = () => {
             <p className="text-slate-500 text-xs md:text-sm font-bold uppercase tracking-widest opacity-80 mt-1">Monitoreo operativo de adquisiciones públicas.</p>
           </div>
           <div className="flex items-center gap-3 w-full sm:w-auto">
-            <button className="flex-1 sm:flex-none flex items-center justify-center gap-2 bg-white border border-slate-200 px-4 py-2 rounded-xl text-xs font-black uppercase tracking-widest text-slate-700 hover:bg-slate-50 transition-all">
+            <button className="flex-1 sm:flex-none flex items-center justify-center gap-2 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 px-4 py-2 rounded-xl text-xs font-black uppercase tracking-widest text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">
               <span className="material-symbols-outlined !text-lg">analytics</span>
               Estadísticas
             </button>
@@ -47,7 +47,7 @@ const Procurement: React.FC = () => {
         {/* Metrics Row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {metrics.map((m, i) => (
-            <div key={i} className="bg-white p-5 md:p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group cursor-default">
+            <div key={i} className="bg-white dark:bg-slate-900 p-5 md:p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md dark:hover:shadow-primary/5 transition-all group cursor-default">
               <div className="flex items-center justify-between mb-4">
                 <div className={`size-10 md:size-11 rounded-xl flex items-center justify-center bg-${m.color === 'primary' ? 'primary/10' : m.color.split('-')[0] + '-50'} text-${m.color === 'primary' ? 'primary' : m.color.split('-')[0] + '-' + m.color.split('-')[1]} group-hover:scale-110 transition-transform`}>
                   <span className="material-symbols-outlined !text-xl md:!text-2xl font-bold">{m.icon}</span>
@@ -62,8 +62,8 @@ const Procurement: React.FC = () => {
 
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 md:gap-8">
           {/* Main Table Panel */}
-          <div className="xl:col-span-2 bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden flex flex-col min-h-[400px]">
-            <div className="p-5 md:p-6 border-b border-slate-100 flex flex-col sm:flex-row gap-4 items-center justify-between bg-slate-50/30">
+          <div className="xl:col-span-2 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col min-h-[400px]">
+            <div className="p-5 md:p-6 border-b border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row gap-4 items-center justify-between bg-slate-50 dark:bg-slate-800/30">
               <h4 className="font-black text-xs md:text-sm text-slate-900 uppercase tracking-widest shrink-0">Procesos Activos</h4>
               <div className="flex gap-2 w-full sm:w-auto overflow-x-auto no-scrollbar">
                 <select className="flex-1 sm:flex-none text-[10px] font-black uppercase tracking-widest rounded-xl border-slate-200 bg-white focus:ring-primary h-9 px-3">
@@ -79,7 +79,7 @@ const Procurement: React.FC = () => {
             <div className="overflow-x-auto flex-1 custom-scrollbar">
               <table className="w-full text-left border-collapse min-w-[800px]">
                 <thead>
-                  <tr className="bg-slate-50/50 border-b border-slate-100">
+                  <tr className="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-100 dark:border-slate-800">
                     <th className="px-5 md:px-6 py-4 text-[10px] font-black text-slate-400 uppercase tracking-widest">Código / Título</th>
                     <th className="px-5 md:px-6 py-4 text-[10px] font-black text-slate-400 uppercase tracking-widest">Presupuesto</th>
                     <th className="px-5 md:px-6 py-4 text-[10px] font-black text-slate-400 uppercase tracking-widest">Apertura</th>
@@ -88,7 +88,7 @@ const Procurement: React.FC = () => {
                     <th className="px-5 md:px-6 py-4 text-[10px] font-black text-slate-400 uppercase tracking-widest text-center">Acciones</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-slate-50">
+                <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
                   {processes.map((p, i) => (
                     <tr key={i} className="hover:bg-slate-50/50 transition-colors group">
                       <td className="px-5 md:px-6 py-4 md:py-5 min-w-[200px]">
@@ -143,7 +143,7 @@ const Procurement: React.FC = () => {
           </div>
 
           {/* Right Panel: Calendar/Milestones - Stacks on small screens */}
-          <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 flex flex-col h-fit">
+          <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm p-6 flex flex-col h-fit">
             <div className="flex items-center justify-between mb-8 border-b border-slate-50 pb-4">
               <h4 className="font-black text-sm md:text-base text-slate-900 uppercase tracking-widest">Hitos Críticos</h4>
               <div className="size-9 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 cursor-pointer hover:bg-primary/10 hover:text-primary transition-all shadow-sm">

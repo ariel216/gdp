@@ -125,13 +125,13 @@ const Users: React.FC = () => {
             <p className="text-slate-500 dark:text-slate-400 text-sm md:text-base font-medium">Control centralizado de identidades, roles jerárquicos y auditoría de accesos.</p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <button className="flex-1 lg:flex-none flex items-center justify-center gap-2 px-6 py-3.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl text-xs font-black uppercase tracking-widest text-slate-600 dark:text-slate-300 shadow-sm hover:bg-slate-50 transition-all active:scale-95">
+            <button className="flex-1 lg:flex-none flex items-center justify-center gap-2 px-6 py-3.5 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl text-xs font-black uppercase tracking-widest text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all active:scale-95">
               <span className="material-symbols-outlined !text-xl">file_download</span>
               Exportar
             </button>
             <button 
               onClick={openCreateModal}
-              className="flex-1 lg:flex-none flex items-center justify-center gap-3 px-8 py-3.5 bg-primary text-white rounded-2xl text-xs font-black uppercase tracking-widest shadow-xl shadow-primary/25 hover:bg-blue-600 transition-all active:scale-95 group"
+              className="flex-1 lg:flex-none flex items-center justify-center gap-3 px-8 py-3.5 bg-primary text-white rounded-2xl text-xs font-black uppercase tracking-widest shadow-lg shadow-primary/30 hover:bg-blue-600 active:scale-95 transition-all group"
             >
               <span className="material-symbols-outlined !text-xl group-hover:rotate-90 transition-transform">add</span>
               Nuevo Usuario
@@ -161,7 +161,7 @@ const Users: React.FC = () => {
         </div>
 
         {/* Filters & Actions Bar */}
-        <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-200 dark:border-slate-800 shadow-sm p-6 transition-colors">
+        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm p-6 transition-colors">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-end">
             <div className="md:col-span-4 space-y-2">
               <label className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] px-1">Búsqueda Global</label>
@@ -218,11 +218,11 @@ const Users: React.FC = () => {
         </div>
 
         {/* Data Table */}
-        <div className="bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden transition-colors">
+        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm overflow-hidden transition-colors">
           <div className="overflow-x-auto custom-scrollbar">
             <table className="w-full text-left border-collapse min-w-[1000px]">
               <thead>
-                <tr className="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800">
+                <tr className="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-100 dark:border-slate-800">
                   <th className="px-8 py-6 w-12">
                     <input 
                       checked={selectedIds.size > 0 && selectedIds.size === filteredUsers.length}
@@ -238,7 +238,7 @@ const Users: React.FC = () => {
                   <th className="px-8 py-6 text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] text-right">Acciones</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
+              <tbody className="divide-y divide-slate-100 dark:divide-slate-800/50">
                 {filteredUsers.length > 0 ? filteredUsers.map((u) => (
                   <tr key={u.id} className={`group hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors ${selectedIds.has(u.id) ? 'bg-primary/[0.02]' : ''}`}>
                     <td className="px-8 py-6">

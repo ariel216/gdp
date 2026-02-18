@@ -54,9 +54,9 @@ const Entities: React.FC = () => {
             <h1 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight uppercase">Gestión de Entidades</h1>
             <p className="text-slate-500 dark:text-slate-400 text-sm md:text-base font-medium">Instituciones registradas en el ecosistema GPD.</p>
           </div>
-          <button 
+            <button 
             onClick={() => { setEditingEntity({}); setIsModalOpen(true); }}
-            className="bg-primary text-white px-8 py-3.5 rounded-2xl text-xs font-black uppercase tracking-widest shadow-xl shadow-primary/25 hover:bg-blue-600 transition-all active:scale-95 flex items-center gap-3"
+            className="bg-primary text-white px-8 py-3.5 rounded-2xl text-xs font-black uppercase tracking-widest shadow-lg shadow-primary/30 hover:bg-blue-600 active:scale-95 transition-all flex items-center gap-3"
           >
             <span className="material-symbols-outlined">add_business</span>
             Nueva Entidad
@@ -82,7 +82,7 @@ const Entities: React.FC = () => {
         </div>
 
         {/* Filters */}
-        <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-200 dark:border-slate-800 p-6">
+        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 p-6">
           <div className="relative group max-w-xl">
             <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">search</span>
             <input 
@@ -97,7 +97,7 @@ const Entities: React.FC = () => {
         {/* Grid of Entities */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {filteredEntities.map((e) => (
-            <div key={e.id} className="bg-white dark:bg-slate-900 rounded-[3rem] border border-slate-200 dark:border-slate-800 p-8 shadow-sm hover:shadow-xl transition-all group relative overflow-hidden">
+            <div key={e.id} className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 p-6 md:p-8 shadow-sm hover:shadow-md transition-all group relative overflow-hidden">
                <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:scale-125 transition-transform duration-700">
                   <span className="material-symbols-outlined !text-[8rem]">business</span>
                </div>

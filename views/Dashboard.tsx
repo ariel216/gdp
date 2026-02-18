@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { StatCard } from '../components/Card';
 
 const Dashboard: React.FC = () => {
   const primaryStats = [
@@ -40,45 +41,36 @@ const Dashboard: React.FC = () => {
       {/* KPI Section - Row 1 */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         {primaryStats.map((stat, idx) => (
-          <div key={idx} className="bg-white dark:bg-slate-900 p-5 md:p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md dark:hover:shadow-primary/5 transition-all group cursor-pointer">
-            <div className="flex items-start justify-between">
-              <div className={`size-10 md:size-12 bg-${stat.color}-50 dark:bg-${stat.color}-900/20 text-${stat.color}-600 dark:text-${stat.color}-400 rounded-xl flex items-center justify-center transition-transform group-hover:scale-110`}>
-                <span className="material-symbols-outlined !text-[24px] md:!text-[28px]">{stat.icon}</span>
-              </div>
-              <span className={`text-${stat.isNegative ? 'red' : stat.color}-600 dark:text-${stat.isNegative ? 'red' : stat.color}-400 text-[10px] md:text-xs font-bold px-2 py-1 bg-${stat.isNegative ? 'red' : stat.color}-50 dark:bg-${stat.isNegative ? 'red' : stat.color}-900/20 rounded-full`}>
-                {stat.change}
-              </span>
-            </div>
-            <div className="mt-4">
-              <h3 className="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white tabular-nums leading-none">{stat.value}</h3>
-              <p className="text-xs md:text-sm font-medium text-slate-500 dark:text-slate-400 mt-1.5">{stat.label}</p>
-            </div>
-          </div>
+          <StatCard
+            key={idx}
+            label={stat.label}
+            value={stat.value}
+            icon={stat.icon}
+            color={stat.color}
+            change={stat.change}
+            isNegative={stat.isNegative}
+          />
         ))}
       </div>
 
       {/* KPI Section - Row 2 */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         {secondaryStats.map((stat, idx) => (
-          <div key={idx} className="bg-white dark:bg-slate-900 p-5 md:p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-md dark:hover:shadow-primary/5 transition-all group cursor-pointer">
-            <div className="flex items-start justify-between">
-              <div className={`size-10 md:size-12 bg-${stat.color}-50 dark:bg-${stat.color}-900/20 text-${stat.color}-600 dark:text-${stat.color}-400 rounded-xl flex items-center justify-center transition-transform group-hover:scale-110`}>
-                <span className="material-symbols-outlined !text-[24px] md:!text-[28px]">{stat.icon}</span>
-              </div>
-            </div>
-            <div className="mt-4">
-              <h3 className="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white tabular-nums leading-none">{stat.value}</h3>
-              <p className="text-xs md:text-sm font-medium text-slate-500 dark:text-slate-400 mt-1.5">{stat.label}</p>
-            </div>
-          </div>
+          <StatCard
+            key={idx}
+            label={stat.label}
+            value={stat.value}
+            icon={stat.icon}
+            color={stat.color}
+          />
         ))}
       </div>
 
       {/* Main Panels Grid */}
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 md:gap-8 pb-8">
         {/* Recent Activity Panel */}
-        <div className="xl:col-span-2 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col min-h-[400px]">
-          <div className="p-4 md:p-6 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
+        <div className="xl:col-span-2 bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col min-h-[400px] overflow-hidden">
+          <div className="p-5 md:p-6 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50/50 dark:bg-slate-800/30">
             <div>
               <h2 className="text-base md:text-lg font-bold text-slate-900 dark:text-white">Actividad Reciente</h2>
               <p className="text-[10px] md:text-xs text-slate-500 dark:text-slate-400 font-medium">Historial en tiempo real</p>

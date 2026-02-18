@@ -34,9 +34,9 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, onViewChange, isCollapse
   ];
 
   return (
-    <aside className={`bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col h-full transition-all duration-300 ${isCollapsed ? 'w-[72px]' : 'w-64'}`}>
-      <div className={`p-4 flex items-center border-b border-slate-100 dark:border-slate-800 h-16 shrink-0 transition-all ${isCollapsed ? 'justify-center' : 'gap-3 px-6'}`}>
-        <div className="size-10 bg-primary rounded-lg flex items-center justify-center text-white shadow-lg shadow-primary/20 shrink-0">
+    <aside className={`bg-white dark:bg-slate-900 border-r border-slate-100 dark:border-slate-800 flex flex-col h-full transition-all duration-300 shadow-sm ${isCollapsed ? 'w-[72px]' : 'w-64'}`}>
+      <div className={`p-4 flex items-center border-b border-slate-100 dark:border-slate-800 h-16 shrink-0 transition-all shadow-sm ${isCollapsed ? 'justify-center' : 'gap-3 px-6'}`}>
+        <div className="size-10 bg-primary rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary/20 shrink-0">
           <span className="material-symbols-outlined text-2xl">account_balance</span>
         </div>
         {!isCollapsed && (
@@ -47,12 +47,12 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, onViewChange, isCollapse
         )}
       </div>
 
-      <nav className={`flex-1 overflow-y-auto space-y-1 custom-scrollbar transition-all ${isCollapsed ? 'p-2' : 'p-4'}`}>
+      <nav className={`flex-1 overflow-y-auto custom-scrollbar transition-all ${isCollapsed ? 'p-2 space-y-1' : 'p-4 space-y-0.5'}`}>
         {/* Regular Dashboard Item */}
         <button
           onClick={() => onViewChange('dashboard')}
           title={isCollapsed ? 'Dashboard' : undefined}
-          className={`w-full flex items-center rounded-lg transition-all ${isCollapsed ? 'justify-center py-2.5' : 'gap-3 px-4 py-2.5'} ${
+          className={`w-full flex items-center rounded-xl transition-all ${isCollapsed ? 'justify-center py-2.5' : 'gap-3 px-4 py-2.5'} ${
             currentView === 'dashboard'
               ? 'bg-primary text-white shadow-sm shadow-primary/20'
               : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800'
@@ -67,7 +67,7 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, onViewChange, isCollapse
           <button 
             onClick={() => !isCollapsed && setIsBandejasOpen(!isBandejasOpen)}
             title={isCollapsed ? 'Bandejas' : undefined}
-            className={`w-full flex items-center text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-all ${isCollapsed ? 'justify-center py-2.5' : 'justify-between px-4 py-2.5'}`}
+            className={`w-full flex items-center text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl transition-all ${isCollapsed ? 'justify-center py-2.5' : 'justify-between px-4 py-2.5'}`}
           >
             <div className={`flex items-center ${isCollapsed ? '' : 'gap-3'}`}>
               <span className="material-symbols-outlined shrink-0">mail</span>
@@ -83,15 +83,15 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, onViewChange, isCollapse
           {isBandejasOpen && !isCollapsed && (
             <div className="ml-4 mt-1 border-l border-slate-100 dark:border-slate-800 space-y-1 animate-in fade-in slide-in-from-top-1 duration-200">
               {bandejaSubItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => onViewChange(item.id)}
-                  className={`w-full flex items-center gap-3 px-4 py-2 rounded-lg transition-all ${
-                    currentView === item.id
-                      ? 'text-primary bg-primary/5 font-bold'
-                      : 'text-slate-500 dark:text-slate-400 hover:text-primary hover:bg-slate-50 dark:hover:bg-slate-800'
-                  }`}
-                >
+                  <button
+                    key={item.id}
+                    onClick={() => onViewChange(item.id)}
+                    className={`w-full flex items-center gap-3 px-4 py-2 rounded-lg text-xs transition-all ${
+                      currentView === item.id
+                        ? 'text-primary bg-primary/5 font-bold'
+                        : 'text-slate-500 dark:text-slate-400 hover:text-primary hover:bg-slate-50 dark:hover:bg-slate-800'
+                    }`}
+                  >
                   <span className="material-symbols-outlined text-xl">{item.icon}</span>
                   <span className="text-xs">{item.label}</span>
                 </button>
@@ -111,7 +111,7 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, onViewChange, isCollapse
             <button
               onClick={() => onViewChange(item.id)}
               title={isCollapsed ? item.label : undefined}
-              className={`w-full flex items-center rounded-lg transition-all ${isCollapsed ? 'justify-center py-2.5' : 'gap-3 px-4 py-2.5'} ${
+              className={`w-full flex items-center rounded-xl transition-all ${isCollapsed ? 'justify-center py-2.5' : 'gap-3 px-4 py-2.5'} ${
                 currentView === item.id || (item.id === 'reports' && currentView === 'reports-generator')
                   ? 'bg-primary text-white shadow-sm shadow-primary/20'
                   : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800'
@@ -124,7 +124,7 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, onViewChange, isCollapse
         ))}
       </nav>
 
-      <div className={`border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50 transition-all ${isCollapsed ? 'p-2' : 'p-4 px-6'}`}>
+      <div className={`border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900 transition-all shadow-sm ${isCollapsed ? 'p-2' : 'p-4 px-6'}`}>
         <div className={`flex items-center transition-all ${isCollapsed ? 'justify-center' : 'gap-3'}`}>
           <img
             alt="Admin"

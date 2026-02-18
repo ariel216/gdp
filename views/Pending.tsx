@@ -172,17 +172,18 @@ const Pending: React.FC = () => {
             <p className="text-slate-500 dark:text-slate-400 text-sm md:text-base font-medium">Gestione los trámites activos que requieren su atención u oficina.</p>
           </div>
           <div className="flex gap-2">
-            <button className="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-slate-500 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-5 py-3 rounded-2xl hover:bg-gray-50 transition-all shadow-sm active:scale-95">
-              <span className="material-symbols-outlined text-sm">file_download</span> Exportar
+            <button className="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-slate-500 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 px-5 py-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-all active:scale-95">
+              <span className="material-symbols-outlined">file_download</span>
+              Exportar
             </button>
-            <button className="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-slate-500 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-5 py-3 rounded-2xl hover:bg-gray-50 transition-all shadow-sm active:scale-95">
+            <button className="flex items-center gap-2 text-xs font-black uppercase tracking-widest text-slate-500 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 px-5 py-3 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-700 transition-all active:scale-95">
               <span className="material-symbols-outlined text-sm">print</span> Imprimir
             </button>
           </div>
         </div>
 
         {/* Dynamic Filters Bar */}
-        <div className="bg-white dark:bg-slate-900 p-6 rounded-[2.5rem] border border-slate-200 dark:border-slate-800 shadow-sm transition-colors">
+        <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm transition-colors">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-end">
             <div className="md:col-span-4 space-y-2">
               <label className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] px-1">Búsqueda rápida</label>
@@ -257,11 +258,11 @@ const Pending: React.FC = () => {
         </div>
 
         {/* Table Content */}
-        <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden transition-colors">
+        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm overflow-hidden transition-colors">
           <div className="overflow-x-auto custom-scrollbar">
             <table className="w-full text-left border-collapse min-w-[1000px]">
               <thead>
-                <tr className="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800">
+                <tr className="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-100 dark:border-slate-800">
                   <th className="px-6 py-5 w-12">
                     <input 
                       checked={selectedIds.size > 0 && selectedIds.size === filteredDocuments.length}
